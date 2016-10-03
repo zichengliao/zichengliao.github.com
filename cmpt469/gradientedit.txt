@@ -1,0 +1,42 @@
+Description
+
+Implement the gradient domain editing method for inserting object from one image into another. 
+
+First, you need to manually create a rough mask in the source image. The masked region contains the object to be inserted. Second, you need to specify a displacement 2-vector that tells where the source image is put in the target image. The displacement vector + mask determines where the object will be put in the target image, and where the boundaries are. Last, solve for the new pixel values within the masked region by the method described in lecture 11-12. 
+
+For whichever language you're to use, you should try to use sparse matrix representation for the left hand side matrix. Otherwise you're very likely to run out of memory, and computation time will soar. You are recommended to use matlab for simplicity. Sparse matrix initialization and sparse linear solver in other languages are tricker to set up -- you also don't want to implement your own linear solver.
+
+http://www.mathworks.com/help/matlab/ref/sparse.html?refresh=true (Links to an external site.)
+
+ 
+ 
+
+What to hand in
+
+A. code with clean comments
+
+B. 3-5 sets of examples in .zip file. The unzipped file should be a folder with naming convention: CMPT_PA2_{yoursfuid}. Each set of example should contain the input images and the output. Do not aim for "correct" results only. Unleash your imagination to make interesting composites. It's an engineering problem to figure out how to do, but takes artistic taste to choose what to do. A 20% bonus (3 pts) will be given to suppliers of fine results, up to a maximum of 3.
+
+ 
+
+Where to hand in
+
+Canvas
+
+ 
+
+Programming language
+
+You may choose your preferred language. Our default language for the class is matlab.
+
+ 
+
+Late Policy
+
+No late submission will be accepted. In case of last day rush, it's recommended to start early and have an submission 1-2 days early.
+
+
+
+Plagiarism Policy
+
+Taking existing code from online or other classmates is not allowed. Identified plagiarism will result in academic punishment according to university policy. There are various versions of code online; I've collected quite a number of them. You want to distance yours from those by writing your code independently (maybe with some extra features in).

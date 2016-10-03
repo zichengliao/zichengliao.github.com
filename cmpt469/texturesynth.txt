@@ -1,0 +1,60 @@
+Description
+
+Implement the first texture synthesis algorithm covered in Sep 22nd's lecture. Input is a source texture; output is a 256x256 synthesized texture image from the input. The implementation should be able to handle both gray scale images and color images. Take a random 3x3 patch from input as seed, grow one pixel at a time. Use the Onion ring synthesis order, and linear scan for patch match. More advanced synthesis order and approximate searching methods are not required to use (no bonus on it either). 
+
+ 
+
+What to hand in
+
+A. code with clean comments
+
+B. 5 sets of examples in .zip file. Each example set contains one input and one output. Use 3 examples from the paper website (below, "extra resources"), and 2 of your own textures, which means it's not something from the web. You should discover 2 textures on your own and take pictures of them, whether it's maple leaf of Canada, textures of Vancouver, surface of your favorite stone, winkles of a human face... anything. A 20% bonus (3 points) will be given to "fine texture" suppliers, up to a maximum number of 3. For each result, report the window size for your synthesis procedure. Submit one result that has the best quality for each input.
+
+ 
+
+Where to hand in
+
+Canvas
+
+ 
+
+Programming language
+
+You may choose your preferred language. Our default language for the class is matlab.
+
+ 
+
+Useful functions in matlab
+
+imread
+
+im2double
+
+zeros
+
+im2col     %get candidate patches for patch match, in ‘sliding’ mode
+
+fspecial(‘gauss’, winsize, std)   %generate a 2D Gaussian kernel for distance metric, you can also do it manually.
+
+imdilate;        %get the union ring: imdilate(mask, strel(‘disk’,1)) - mask
+
+(I'll try to update this list; use >>doc function_name  for explanation) 
+ 
+
+
+Related paper
+
+Texture synthesis by non-parametric sampling, Efros & Leung, ICCV 1999
+
+ 
+
+Extra resources
+
+http://graphics.cs.cmu.edu/people/efros/research/EfrosLeung.html (Links to an external site.)
+The pseudo code on the page could be helpful. It’s not recommended to peek until you really get stuck after use of my office hours.
+
+
+
+Plagiarism Policy
+
+Taking existing code from online or other classmates is not allowed. Identified plagiarism will result in academic punishment according to university policy. There are various versions of code online; I've collected quite a number of them. You want to distance yours from those by writing your code independently (maybe with some extra features in).
